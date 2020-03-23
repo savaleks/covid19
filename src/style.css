@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 1em;
+    text-align: center !important;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-height: 50vh;
+    align-items: center !important;
+}
+
+.dropdown {
+    padding: 0.5em;
+    margin: 1em 0;
+}
+
+.box {
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1em;
+    font-size: 1.2em;
+}
+
+.box.confirmed {
+    padding: 1em;
+    border: 1px solid black;
+    background: lightgrey;
+}
+
+.box.recovered {
+    padding: 1em;
+    border: 1px solid blue;
+    background: lightblue;
+}
+
+.box.deaths {
+    padding: 1em;
+    border: 1px solid red;
+    background: lightgoldenrodyellow;
+}
+
+@media screen and (min-width: 900px) {
+    .flex {
+        flex-wrap: nowrap;
+    }
+}
+
