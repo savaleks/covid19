@@ -5,17 +5,8 @@ cache:
     directories:
         - node_modules
 
-jobs:
-    include:
-        - stage: test
-        script: yarn test
-        - stage: build
-        script: yarn build
-        - stage: deploy
-        deploy:
-            provider: heroku
-            api_key:
-                $HEROKU_KEY
-            app: $COVID19
+deploy:
+    provider: heroku
+    api_key: $HEROKU_KEY
 on:
     branch: master
