@@ -9,8 +9,6 @@ script:
     - npm run build
     - npm test
 
-edge: true
-
 deploy:
     provider: pages
     skip-cleanup: true
