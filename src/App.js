@@ -71,11 +71,11 @@ export default class App extends React.Component {
     
     return (
       <div className="container">
-        <h1 className="header-text">Corona Virus Update</h1>
+        <h1 className="header-text">Corona Virus Online</h1>
         <h4 className="warning">Warning: the data can be inaccurate.</h4>
 
         <select className="dropdown" onChange={this.getCountryData}>
-            <option>Select country</option>
+            <option>Worldwide</option>
             {this.renderCountryOptions()}
         </select>
 
