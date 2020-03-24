@@ -1,17 +1,18 @@
-language: node_js
-node_js:
-    - 'stable'
-cache:
-    directories:
-        - node_modules
+# language: node_js
+# node_js:
+#     - 'stable'
+# cache:
+#     directories:
+#         - node_modules
 
-script:
-    - yarn run build
-    - yarn test
+# script:
+#     - yarn run build
+#     - yarn test
 
 deploy:
     provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
-on:
-    branch: master
+    keep_history: true
+    on:
+        branch: master
