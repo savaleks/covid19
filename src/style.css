@@ -35,18 +35,30 @@
     padding: 1em;
     border: 1px solid black;
     background: lightgrey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .box.recovered {
     padding: 1em;
     border: 1px solid blue;
     background: lightblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .box.deaths {
     padding: 1em;
     border: 1px solid red;
     background: lightgoldenrodyellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header-text {
+    font-family: monospace;
+    font-size: 2.5em;
+}
+
+.warning {
+    color: red;
 }
 
 @media screen and (min-width: 900px) {

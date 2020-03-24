@@ -18,17 +18,25 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.getData();
+    Axios.get(`https://covid19.mathdro.id/api/countries`)
+    .then(res => 
+      res.data.countries.map(country => ({
+        name: `${country.name}`
+      })))
+      .then(countries => {
+        this.setState({
+          countries
+        });
+      })
   }
 
   async getData() {
     const res = await Axios.get("https://covid19.mathdro.id/api");
-    const resCountries = await Axios.get("https://covid19.mathdro.id/api/countries");
-    const countries = Object.keys(resCountries.data.countries);
+
     this.setState({
       confirmed: res.data.confirmed.value,
       recovered: res.data.recovered.value,
-      deaths: res.data.deaths.value,
-      countries
+      deaths: res.data.deaths.value
     });
   }
 
@@ -55,14 +63,16 @@ export default class App extends React.Component {
 
   renderCountryOptions(){
     return this.state.countries.map((country, i) => {
-        return <option key={i}>{country}</option> 
+        return <option>{country.name}</option> 
     });
   }
 
   render() {
+    
     return (
       <div className="container">
-        <h1>Corona Update</h1>
+        <h1 className="header-text">Corona Virus Update</h1>
+        <h4 className="warning">Warning: the data can be inaccurate.</h4>
 
         <select className="dropdown" onChange={this.getCountryData}>
             <option>Select country</option>
