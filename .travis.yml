@@ -8,6 +8,8 @@ cache:
 script:
     - npm run build
     - npm test
+    
+edge: true
 
 deploy:
     provider: heroku
