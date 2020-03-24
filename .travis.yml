@@ -8,11 +8,12 @@ cache:
 script:
     - npm run build
     - npm test
-    
+
 edge: true
 
 deploy:
-    provider: heroku
-    api_key: $HEROKU_KEY
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
 on:
-    branch: master
+    branch: gh-pages
