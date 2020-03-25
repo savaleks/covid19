@@ -2,7 +2,7 @@
   "name": "corona-virus-dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://savaleks.github.io/covid19",
+  "homepage": "https://savaleks.github.io/Covid19",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
